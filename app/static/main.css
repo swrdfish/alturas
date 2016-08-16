@@ -1,0 +1,40 @@
+html {
+	overflow: hidden;
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(#0078ca 0%,#ffffff 100%);
+}
+
+#welcome-wrapper {
+	text-align: center;
+	color: white;
+}
+
+#welcome-logo {
+	width: 25%;
+}
+
+.welcome-button {
+    background: white;
+    color: #5a5a5a;
+    width: 20vw;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1em;
+    display: inline-block;
+    border-radius: 45px;
+	box-shadow: 0px 9px 14px -8px #5f5f5f;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+@media (min-width: 850px){
+	.welcome-button{
+		font-size: 1.4em;
+	}
+}
+.welcome-button:active, .welcome-button:focus {
+	box-shadow: none;
+    transform: translateY(5px);
+}
