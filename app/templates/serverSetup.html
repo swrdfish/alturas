@@ -1,11 +1,24 @@
-<span style="text-decoration: underline; cursor: pointer" id="back-to-1">back</span>
+<div id="back-to-1" style="cursor: pointer; display: inline-block">
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  <span style="font-size: 1.1em;text-decoration: underline;">back</span>
+</div>
 <h2>Create admin account:</h2>
 <p>Enter the credensials for the admin account. Try to keep these credensials a secret.</p>
-
-<img id="welcome-logo" src="static/logo.svg" style="width: 20vw" /><br><br>
-<form>
-	<span>Note: Provide a valid email, it will be used to recover the password in case you forget it!</span><br>
-	<input type="text" placeholder="Email"/><br>
-	<input type="text" placeholder="Password"/><br>
-	<div class="welcome-button" id="btn-create-account">Create</div>
+<form  class="form-horizontal">
+	<span style="font-style: italic;font-size: 0.9em;font-weight: bold;display: block;">Note: Provide a valid email, it will be used to recover the password in case you forget it!</span><br>
+	<div class="form-group">
+    	<label class="control-label">Email address</label>
+  		<input required id="create-acc-email" type="email" class="form-control" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label class="control-lable">Password</label>
+    <input required id="create-acc-pass" type="password" class="form-control" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <input required id="create-acc-retype" type="password" class="form-control" placeholder="Retype">
+  </div>
+  <br>
+  <div class="form-group">
+    	<button class="btn btn-primary btn-block btn-lg" id="create-acc-submit">Create Admin Account</button>
+	</div>
 </form>

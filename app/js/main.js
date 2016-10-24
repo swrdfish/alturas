@@ -5,6 +5,7 @@ const {ipcRenderer} = require('electron')
 const Backbone = require('backbone')
 const _ = require('underscore')
 const PotatoRouter = require('./js/routes/router')
+const $ = require('jquery')
 
 
 let potatorouter = new PotatoRouter()

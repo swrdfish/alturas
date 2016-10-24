@@ -1,0 +1,21 @@
+{
+  "name": "electron-demo",
+  "description": "A simple app to manage Cold Stores in India",
+  "main": "app/index.js",
+  "authors": [
+    "Binayak"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/swrdfish/alturas",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

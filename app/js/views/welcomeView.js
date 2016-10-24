@@ -24,13 +24,12 @@ let WelcomeView = Backbone.View.extend({
 	events: {
 		'click #btn-server': 'setupServer',
 		'click #btn-client': 'setupClient',
-		'click #btn-create-account': 'shout',
+		'submit': 'createAdminAccount',
 		'click #back-to-1': 'back'
 	},
 
 	// Rerender the titles of the todo item.
-	render: function(page) {
-		console.log(typeof page)
+	render(page) {
 		switch(page){
 			case "1":
 				this.$el.html( this.welcomeTpl() )
@@ -42,21 +41,30 @@ let WelcomeView = Backbone.View.extend({
 		return this;
 	},
 
-	setupServer: function(){
+	setupServer(){
 		potatorouter.navigate('welcome/2', true)
 		console.log("initiate server setup")
 	},
 
-	setupClient: function(){
+	setupClient(){
 		potatorouter.navigate('welcome/1', true)
 		console.log("initiate client setup")
 	},
 
-	shout: function(){
-		console.log('Yeah!')
+	createAdminAccount(e){
+		e.preventDefault()
+		// validate password
+		let email = this.$("#create-acc-email").val(),
+			pass = this.$("#create-acc-pass").val(),
+			retype = this.$("#create-acc-retype").val()
+		if(pass !== retype)
+			console.log("passwords didn't match")
+		else
+			console.log("create account with\nemail: " + email + "\npass: " + pass)
+
 	},
 
-	back: function(){
+	back(){
 		potatorouter.navigate('welcome/1', true)
 	}
 })
